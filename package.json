@@ -1,0 +1,27 @@
+{
+  "name": "drivy-frontend-test",
+  "version": "0.0.1",
+  "description": "Getaround Frontend Challenge",
+  "repository": "https://github.com/FloValence/react-cars-front-end-challenge",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@types/react": "^16.9.50",
+    "@types/react-dom": "^16.9.8",
+    "bootstrap": "^4.5.2",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.9.7"
+  },
+  "proxy": "http://localhost:3001/"
+}
