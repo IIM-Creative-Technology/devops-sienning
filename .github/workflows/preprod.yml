@@ -1,8 +1,8 @@
-#name: Deploy website cars-challenge to Heroku
-#on:
-#  push:
-#    branches:
-#      - preprod
+name: Deploy website cars-challenge to Heroku
+on:
+  push:
+    branches:
+      - preprod
 #jobs:
 #  deploy:
 #    runs-on: ubuntu-latest
