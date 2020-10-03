@@ -1,1 +1,1 @@
-web: heroku-buildpack-static src/
+web: heroku-buildpack-static
