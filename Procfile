@@ -1,1 +1,1 @@
-web: create-react-app-buildpack
+web: bin/boot
