@@ -1,1 +1,1 @@
-web: create-react-app-buildpack
+web: heroku-buildpack-static
