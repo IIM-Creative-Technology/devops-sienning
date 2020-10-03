@@ -7,7 +7,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # ça va faire un git clone
       - name: Init project
         uses: actions/checkout@v2
       - name: test
