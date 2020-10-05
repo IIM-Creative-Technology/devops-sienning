@@ -9,4 +9,3 @@ jobs:
     steps:
       - name: Init project
         uses: actions/checkout@v2
-      
