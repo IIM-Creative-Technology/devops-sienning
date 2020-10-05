@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Init project
         uses: actions/checkout@v2
-        - name: Cache multiple paths
+      - name: Cache multiple paths
         uses: actions/cache@v2
         with:
           path: |
