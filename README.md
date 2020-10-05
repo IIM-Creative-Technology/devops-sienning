@@ -5,3 +5,5 @@ Projet de simulation de location de voiture. (en fonction du temps de location e
 
 
 ## Heroku
+prod : https://cars-devops.herokuapp.com/
+preprod : https://cars-devops-preprod.herokuapp.com/
