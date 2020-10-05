@@ -9,8 +9,10 @@ jobs:
     steps:
       - name: Init project
         uses: actions/checkout@v2
+
       - name: test
         uses: guahanweb/actions/node-app@master
+
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.7 
         with:
