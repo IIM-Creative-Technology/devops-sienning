@@ -1,20 +1,29 @@
-name: Deploy website cars-challenge to Heroku
+name: Deploy website cars-challenge preprod to Heroku
 on:
   push:
     branches:
       - preprod
 jobs:
-  deploy:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Init project
         uses: actions/checkout@v2
+      - name: Setup Node JS
+        uses: actions/setup-node
+      - run: npm ci
       - name: Cache multiple paths
         uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
+      - name: test
+        uses: guahanweb/actions/node-app@master
+      
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.7 
         with:
