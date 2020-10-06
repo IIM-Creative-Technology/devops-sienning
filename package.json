@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "webpack --config webpack.conf.js"
   },
   "dependencies": {
     "@types/react": "^16.9.51",
