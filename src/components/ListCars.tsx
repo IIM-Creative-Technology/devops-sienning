@@ -1,10 +1,10 @@
 import * as React from 'react';
 import CarsCard from './CarsCard';
 
-const ListCars = ({ cars, duration, distance }) => (
+const ListCars = ({ cars, duration, distance }:any) => (
     <div className="row">
         {
-            cars.map((i, index) =>
+            cars.map((i:any, index:any) =>
                 <CarsCard 
                     key={'i'+index} 
                     urlImage={i.picturePath} 

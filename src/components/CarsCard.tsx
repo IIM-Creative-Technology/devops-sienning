@@ -1,11 +1,11 @@
 import * as React from 'react';
 import '../CarsCard.css'
 
-const CarsCard = ({ urlImage, brand, model, pricePerDay, pricePerKm, duration, distance }) => {
+const CarsCard = ({ urlImage, brand, model, pricePerDay, pricePerKm, duration, distance }:any) => {
     let pDay = pricePerDay / 100;
     let pKm = pricePerKm / 100;
 
-    const calculatePDay = (pDay) => {
+    const calculatePDay = (pDay:any) => {
         pDay = pricePerDay / 100;
 
         if (duration > 1 && duration < 4) {
@@ -18,7 +18,7 @@ const CarsCard = ({ urlImage, brand, model, pricePerDay, pricePerKm, duration, d
         return pDay.toFixed(2);
     }
 
-    const calcPrice = (pD, pK, duration, distance) => {
+    const calcPrice = (pD:any, pK:any, duration:any, distance:any) => {
         const pDay = calculatePDay(pD);
         const price = ((duration * pDay) + (distance * pK)).toFixed(2);
         return price;

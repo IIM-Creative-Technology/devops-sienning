@@ -2,7 +2,7 @@ const express = require("express");
 const cars = require("./cars.json");
 const app = express();
 const Bundler = require("parcel-bundler");
-const bundler = new Bundler("src/index.html", { logLevel: 2 });
+const bundler = new Bundler("./public/index.html", { logLevel: 2 });
 
 const PORT = 3001;
 

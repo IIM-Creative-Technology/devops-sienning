@@ -46,13 +46,13 @@ class Cars extends React.Component<any, IState> {
         }
     }
 
-    async carsFilter(dur, dist) {
+    async carsFilter(dur:any, dist:any) {
         const res = await fetch('http://localhost:3001/cars.json?duration=' + dur + '&distance=' + dist);
         const data = await res.json();
         return data;
     }
 
-    handleOnSubmit = (e) => {
+    handleOnSubmit = (e:any) => {
         e.preventDefault();
         const dur = e.currentTarget.durationFilter.value;
         const dist = e.currentTarget.distanceFilter.value;
@@ -61,14 +61,14 @@ class Cars extends React.Component<any, IState> {
 
     };
 
-    handleOnChangeDuration = (e) => {
+    handleOnChangeDuration = (e:any) => {
         const val = e.currentTarget.value
         
         this.setState({ valueDuration: val });
 
     };
 
-    handleOnChangeDistance = (e) => {
+    handleOnChangeDistance = (e:any) => {
         const val = e.currentTarget.value
         this.setState({ valueDistance: val });
 

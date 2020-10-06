@@ -1,10 +1,10 @@
 import * as React from 'react';
 import '../Filter.css';
 
-const Filter = ({ handleSubmit, handleOnChangeDuration, handleOnChangeDistance, duration, distance }) => {
-    const calcPercent = (dur) => {
+const Filter = ({ handleSubmit, handleOnChangeDuration, handleOnChangeDistance, duration, distance }:any) => {
+    const calcPercent = (dur:any) => {
         let percent = 10;
-        const offer = document.getElementById("offer");
+        const offer:any = document.getElementById("offer");
 
         if(dur > 1 && dur < 4){
             offer.style.visibility = "visible";
