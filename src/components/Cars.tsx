@@ -35,7 +35,7 @@ class Cars extends React.Component<any, IState> {
         this.setState({ isLoading: true })
 
         try {
-            const res = await fetch('http://localhost:3001/cars.json');
+            const res = await fetch('https://cars-devops.herokuapp.com/cars.json');
             const data = await res.json();
             this.setState({ cars: data, isLoading: false })
         } catch (err) {
