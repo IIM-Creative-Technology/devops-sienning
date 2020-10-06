@@ -47,7 +47,7 @@ class Cars extends React.Component<any, IState> {
     }
 
     async carsFilter(dur:any, dist:any) {
-        const res = await fetch('http://localhost:3001/cars.json?duration=' + dur + '&distance=' + dist);
+        const res = await fetch('https://cars-devops.herokuapp.com/cars.json?duration=' + dur + '&distance=' + dist);
         const data = await res.json();
         return data;
     }
@@ -93,12 +93,13 @@ class Cars extends React.Component<any, IState> {
 
                 <div className="container">
                     <h4 className="text-center mb-4 text-white">Cars available</h4>
-                    {isLoading ? (
-                        <Spinner />
-                    ) : (
-                            <div className="card-group">
-                                <ListCars cars={cars} duration={valueDuration} distance={valueDistance}></ListCars>
-                            </div>
+                    {
+                        isLoading ? (
+                            <Spinner />
+                        ) : (
+                                <div className="card-group">
+                                    <ListCars cars={cars} duration={valueDuration} distance={valueDistance}></ListCars>
+                                </div>
                         )
                     }
                 </div>
