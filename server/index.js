@@ -4,7 +4,7 @@ const app = express();
 const Bundler = require("parcel-bundler");
 const bundler = new Bundler("./public/index.html", { logLevel: 2 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.get("/cars.json", (req, res) => {
   let availableCars = cars.map((car, i) => {
@@ -14,15 +14,13 @@ app.get("/cars.json", (req, res) => {
 
   if (req.query.duration) {
     availableCars = availableCars.filter(
-      ({ availability }) =>
-        parseInt(req.query.duration, 10) <= availability.maxDuration
+      ({ availability }) => parseInt(req.query.duration, 10) <= availability.maxDuration
     );
   }
 
   if (req.query.distance) {
     availableCars = availableCars.filter(
-      ({ availability }) =>
-        parseInt(req.query.distance, 10) <= availability.maxDistance
+      ({ availability }) => parseInt(req.query.distance, 10) <= availability.maxDistance
     );
   }
   res.json(availableCars);

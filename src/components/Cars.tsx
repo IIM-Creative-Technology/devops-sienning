@@ -36,6 +36,7 @@ class Cars extends React.Component<any, IState> {
 
         try {
             const res = await fetch('https://cars-devops.herokuapp.com/cars.json');
+            // const res = await fetch('http://localhost:3001/cars.json');
             const data = await res.json();
             this.setState({ cars: data, isLoading: false })
         } catch (err) {
@@ -48,6 +49,7 @@ class Cars extends React.Component<any, IState> {
 
     async carsFilter(dur:any, dist:any) {
         const res = await fetch('https://cars-devops.herokuapp.com/cars.json?duration=' + dur + '&distance=' + dist);
+        // const res = await fetch('http://localhost:3001/cars.json?duration=' + dur + '&distance=' + dist);
         const data = await res.json();
         return data;
     }

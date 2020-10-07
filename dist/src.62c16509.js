@@ -28370,18 +28370,45 @@ module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/components/CarsCard.tsx":[function(require,module,exports) {
 "use strict";
 
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function () {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
 
-var React = _interopRequireWildcard(require("react"));
+var React = __importStar(require("react"));
 
 require("../CarsCard.css");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var CarsCard = function (_a) {
   var urlImage = _a.urlImage,
@@ -28436,25 +28463,55 @@ var CarsCard = function (_a) {
   }, React.createElement("small", null, "Price/km : ", pKm, " \u20AC")))));
 };
 
-var _default = CarsCard;
-exports.default = _default;
+exports.default = CarsCard;
 },{"react":"../node_modules/react/index.js","../CarsCard.css":"../src/CarsCard.css"}],"../src/components/ListCars.tsx":[function(require,module,exports) {
 "use strict";
+
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function () {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
 
-var React = _interopRequireWildcard(require("react"));
+var React = __importStar(require("react"));
 
-var _CarsCard = _interopRequireDefault(require("./CarsCard"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+var CarsCard_1 = __importDefault(require("./CarsCard"));
 
 var ListCars = function (_a) {
   var cars = _a.cars,
@@ -28463,7 +28520,7 @@ var ListCars = function (_a) {
   return React.createElement("div", {
     className: "row"
   }, cars.map(function (i, index) {
-    return React.createElement(_CarsCard.default, {
+    return React.createElement(CarsCard_1.default, {
       key: 'i' + index,
       urlImage: i.picturePath,
       brand: i.brand,
@@ -28476,8 +28533,7 @@ var ListCars = function (_a) {
   }));
 };
 
-var _default = ListCars;
-exports.default = _default;
+exports.default = ListCars;
 },{"react":"../node_modules/react/index.js","./CarsCard":"../src/components/CarsCard.tsx"}],"../src/Filter.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -28486,18 +28542,45 @@ module.hot.accept(reloadCSS);
 },{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/components/Filter.tsx":[function(require,module,exports) {
 "use strict";
 
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function () {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
 
-var React = _interopRequireWildcard(require("react"));
+var React = __importStar(require("react"));
 
 require("../Filter.css");
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 var Filter = function (_a) {
   var handleSubmit = _a.handleSubmit,
@@ -28563,8 +28646,7 @@ var Filter = function (_a) {
   })));
 };
 
-var _default = Filter;
-exports.default = _default;
+exports.default = Filter;
 },{"react":"../node_modules/react/index.js","../Filter.css":"../src/Filter.css"}],"../src/components/Spinner.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -28621,28 +28703,7 @@ exports.default = Spinner;
 },{"react":"../node_modules/react/index.js"}],"../src/components/Cars.tsx":[function(require,module,exports) {
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-require("../Cars.css");
-
-var _ListCars = _interopRequireDefault(require("./ListCars"));
-
-var _Filter = _interopRequireDefault(require("./Filter"));
-
-var _Spinner = _interopRequireDefault(require("./Spinner"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var __extends = void 0 && (void 0).__extends || function () {
+var __extends = this && this.__extends || function () {
   var extendStatics = function (d, b) {
     extendStatics = Object.setPrototypeOf || {
       __proto__: []
@@ -28666,7 +28727,39 @@ var __extends = void 0 && (void 0).__extends || function () {
   };
 }();
 
-var __awaiter = void 0 && (void 0).__awaiter || function (thisArg, _arguments, P, generator) {
+var __createBinding = this && this.__createBinding || (Object.create ? function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  Object.defineProperty(o, k2, {
+    enumerable: true,
+    get: function () {
+      return m[k];
+    }
+  });
+} : function (o, m, k, k2) {
+  if (k2 === undefined) k2 = k;
+  o[k2] = m[k];
+});
+
+var __setModuleDefault = this && this.__setModuleDefault || (Object.create ? function (o, v) {
+  Object.defineProperty(o, "default", {
+    enumerable: true,
+    value: v
+  });
+} : function (o, v) {
+  o["default"] = v;
+});
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+
+  __setModuleDefault(result, mod);
+
+  return result;
+};
+
+var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
       resolve(value);
@@ -28698,7 +28791,7 @@ var __awaiter = void 0 && (void 0).__awaiter || function (thisArg, _arguments, P
   });
 };
 
-var __generator = void 0 && (void 0).__generator || function (thisArg, body) {
+var __generator = this && this.__generator || function (thisArg, body) {
   var _ = {
     label: 0,
     sent: function () {
@@ -28806,6 +28899,26 @@ var __generator = void 0 && (void 0).__generator || function (thisArg, body) {
     };
   }
 };
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __importStar(require("react"));
+
+require("../Cars.css");
+
+var ListCars_1 = __importDefault(require("./ListCars"));
+
+var Filter_1 = __importDefault(require("./Filter"));
+
+var Spinner_1 = __importDefault(require("./Spinner"));
 
 var Cars =
 /** @class */
@@ -28951,7 +29064,7 @@ function (_super) {
       className: "lead"
     }, React.createElement("div", {
       className: "w-50 mx-auto"
-    }, React.createElement(_Filter.default, {
+    }, React.createElement(Filter_1.default, {
       handleSubmit: this.handleOnSubmit,
       handleOnChangeDuration: this.handleOnChangeDuration,
       handleOnChangeDistance: this.handleOnChangeDistance,
@@ -28961,9 +29074,9 @@ function (_super) {
       className: "container"
     }, React.createElement("h4", {
       className: "text-center mb-4 text-white"
-    }, "Cars available"), isLoading ? React.createElement(_Spinner.default, null) : React.createElement("div", {
+    }, "Cars available"), isLoading ? React.createElement(Spinner_1.default, null) : React.createElement("div", {
       className: "card-group"
-    }, React.createElement(_ListCars.default, {
+    }, React.createElement(ListCars_1.default, {
       cars: cars,
       duration: valueDuration,
       distance: valueDistance
@@ -28973,8 +29086,7 @@ function (_super) {
   return Cars;
 }(React.Component);
 
-var _default = Cars;
-exports.default = _default;
+exports.default = Cars;
 },{"react":"../node_modules/react/index.js","../Cars.css":"../src/Cars.css","./ListCars":"../src/components/ListCars.tsx","./Filter":"../src/components/Filter.tsx","./Spinner":"../src/components/Spinner.tsx"}],"../src/App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -47265,7 +47377,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54546" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63439" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
