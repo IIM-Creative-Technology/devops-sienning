@@ -10,10 +10,10 @@ jobs:
       - name: Init project
         uses: actions/checkout@v2 
       - name: Setup Node JS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2.1.2
       - run: npm ci
       - name: Cache multiple paths
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.2
         with:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
