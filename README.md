@@ -1,8 +1,16 @@
 # Projet Devops Léna ENG
 Projet ReactJS de notation de films.
 
+## CI (Continuous Integration)
+## CD (Continuous Deployment)
 
-------------------------------------
+
+-------
+### URL
+master : [https://films-devops.herokuapp.com/](https://films-devops.herokuapp.com/)
+preprod : [https://films-devops-preprod.herokuapp.com/](https://films-devops-preprod.herokuapp.com/)
+
+-------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
