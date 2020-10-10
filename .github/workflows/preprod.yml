@@ -1,6 +1,6 @@
 name: Deploy website cars-challenge preprod to Heroku
 on:
-  push_request:
+  pull_request:
     branches:
       - preprod
 jobs:
