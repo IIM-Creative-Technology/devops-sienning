@@ -18,8 +18,8 @@ jobs:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
-      - name: test
-        uses: guahanweb/actions/node-app@master
+      - name: eslint
+        uses: icrawl/action-eslint@v1
       - name: npm install, build and test
         run: |
           npm install

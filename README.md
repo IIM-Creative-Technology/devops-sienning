@@ -1,13 +1,14 @@
 # Projet Devops Léna ENG
 Petit projet ReactJS de notation de films.
 
+Pour le déploiement automatisé, j'ai utilisé les outils Github Actions et Heroku.
+
 ## master
 Le déploiement de l'application Web est déclenché après une pull request sur le repository [devops-sienning](https://github.com/IIM-Creative-Technology/devops-sienning).
 
-### CI (Continuous Integration)
+### CI (Continuous Integration) / CD (Continuous Deployment)
 L'étape build se concentre principalement sur l'initatilisation du projet et des tests.
 
-### CD (Continuous Deployment)
 Le déploiement n'a pas lieu, tant que le build n'a pas été effectué (ou en cas d'erreur). Le déploiement est géré par Heroku.
 
 ## preprod
