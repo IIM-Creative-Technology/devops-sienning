@@ -1,5 +1,5 @@
 # Projet Devops Léna ENG
-Petit projet ReactJS de notation de films.
+Petit projet ReactJS de notation de films, pour un entretien d'embauche (stage de 3ème année à l'IIM).
 
 Pour le déploiement automatisé, j'ai utilisé les outils Github Actions et Heroku.
 
