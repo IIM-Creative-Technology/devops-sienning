@@ -1,6 +1,6 @@
 name: Deploy website cars-challenge preprod to Heroku
 on:
-  pull_request:
+  push:
     branches:
       - preprod
 jobs:
@@ -20,6 +20,11 @@ jobs:
           restore-keys: ${{runner.os}}-npm-
       - name: test
         uses: guahanweb/actions/node-app@master
+      - name: npm install, build and test
+        run: |
+          npm install
+          npm run build --if-present
+          npm test
       
   deploy:
     runs-on: ubuntu-latest

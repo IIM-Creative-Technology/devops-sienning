@@ -1,9 +1,17 @@
 # Projet Devops Léna ENG
-Projet ReactJS de notation de films.
+Petit projet ReactJS de notation de films.
 
-## CI (Continuous Integration)
-## CD (Continuous Deployment)
-Sur la branche master on
+## master
+Le déploiement de l'application Web est déclenché après une pull request sur le repository [devops-sienning](https://github.com/IIM-Creative-Technology/devops-sienning).
+
+### CI (Continuous Integration)
+L'étape build se concentre principalement sur l'initatilisation du projet et des tests.
+
+### CD (Continuous Deployment)
+Le déploiement n'a pas lieu, tant que le build n'a pas été effectué (ou en cas d'erreur). Le déploiement est géré par Heroku.
+
+## preprod
+La branche preprod concerne les tests de l'application.
 
 -------
 ### URL
