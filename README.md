@@ -3,12 +3,12 @@ Projet ReactJS de notation de films.
 
 ## CI (Continuous Integration)
 ## CD (Continuous Deployment)
-Sur la branche master 
+Sur la branche master on
 
 -------
 ### URL
-master : [https://films-devops.herokuapp.com/](https://films-devops.herokuapp.com/)
-preprod : [https://films-devops-preprod.herokuapp.com/](https://films-devops-preprod.herokuapp.com/)
+master : [https://films-devops.herokuapp.com/](https://films-devops.herokuapp.com/)<br />
+preprod : [https://films-devops-preprod.herokuapp.com/](https://films-devops-preprod.herokuapp.com/)<br />
 
 -------
 

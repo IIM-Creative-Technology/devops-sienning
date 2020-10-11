@@ -27,10 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Get artifact
-        uses: actions/download-artifact@v1
-        with:
-          name: devops-sienning
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.7 
         with:
