@@ -30,7 +30,7 @@ jobs:
       - name: Get artifact
         uses: actions/download-artifact@v1
         with:
-          name: react-github-actions-build
+          name: devops-sienning
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.7 
         with:
