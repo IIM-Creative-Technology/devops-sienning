@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Init project
         uses: actions/checkout@v2
-      - name: eslint
-        uses: icrawl/action-eslint@v1
       - name: Setup Node JS
         uses: actions/setup-node@v2.1.2
       - name: Cache multiple paths
