@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Init project
         uses: actions/checkout@v2
+      - name: eslint
+        uses: icrawl/action-eslint@v1
       - name: Setup Node JS
         uses: actions/setup-node@v2.1.2
       - name: Cache multiple paths
@@ -18,8 +20,6 @@ jobs:
           path: ~/.npm
           key: ${{runner.os}}-npm-${{hashFiles('**/package-lock.json')}}
           restore-keys: ${{runner.os}}-npm-
-      - name: eslint
-        uses: icrawl/action-eslint@v1
       - name: npm install, build and test
         run: |
           npm install
