@@ -173,7 +173,7 @@ class Home extends Component {
     return (
       <div className="content-home">
         <Container>
-          <h1>CinémApp</h1>
+          <h1>CinémApp coucou</h1>
           {isLoading ? (
             <></>
           ) : (
